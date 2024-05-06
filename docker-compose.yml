@@ -1,0 +1,15 @@
+version: '3.10'
+services:
+  fastapi:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    working_dir: /code
+    ports:
+      - '6060:80'
+    env_file:
+      - .env
+    # volumes:
+    #     - /home/ubuntu/venv
+    #     - ./docker/ssl:/etc/nginx/ssl
+    # command: uvicorn app.main:app --host ${APP_HOST}
