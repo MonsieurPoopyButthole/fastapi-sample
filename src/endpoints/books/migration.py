@@ -20,16 +20,19 @@ def create_books_table():
     try:
         con = sql_connection()
         cur = con.cursor()
+        cur.execute('''DROP TABLE IF EXISTS books''')
         cur.execute(
         '''CREATE TABLE books(
         id INTEGER PRIMARY KEY,
         name TEXT,
         author TEXT,
-        year TEXT);'''
+        year TEXT,
+        logo TEXT,
+        description TEXT);'''
                     )
         con.commit()
         print('The table is created successfully')
-    except Error:
-        print(Error)
+    except Error as e:
+        print(e)
 
 create_books_table()
