@@ -14,7 +14,7 @@ def set_openapi_spec(openapi_schema, routes):
         return openapi_schema
     
     openapi_schema = get_openapi(
-        title="Database Service",
+        title="Fast API Sample Service",
         version="0.1",
         # summary="This is a very custom OpenAPI schema",
         description=description,
