@@ -1,12 +1,11 @@
 from fastapi import APIRouter
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import JSONResponse
 from fastapi.requests import Request
-from pydantic import BaseModel, field_validator, ValidationError, Field
+from pydantic import BaseModel, field_validator, Field
 from src import helper
 from datetime import datetime
 import sqlite3
 from sqlite3 import Error
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 router = APIRouter()

@@ -2,7 +2,6 @@ from fastapi import FastAPI
 import os
 import logging  # For logging
 from dotenv import load_dotenv
-from fastapi.staticfiles import StaticFiles # For environment variables
 from src import router
 from fastapi.middleware.cors import CORSMiddleware
 from src.api_spec import api_spec_editor

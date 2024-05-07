@@ -1,6 +1,4 @@
 from fastapi.openapi.utils import get_openapi
-import re
-import json
 
 
 # The description field of the api spec is compatible with readme syntax
