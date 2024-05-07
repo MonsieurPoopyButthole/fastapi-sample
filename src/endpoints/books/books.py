@@ -47,12 +47,12 @@ def sql_connection():
 async def get_books(request: Request):
     templates = Jinja2Templates(directory=helper.get_root_path() + "/src/templates")
     connection = sql_connection()
-    connection.row_factory = sqlite3.Row
+    # connection.row_factory = sqlite3.Row
     try:
         cursor = connection.cursor()
         cursor.execute("SELECT * FROM books")
         rows = cursor.fetchall()
-        # items = {dict(row) for row in rows}
+        # items = {vars(row) for row in rows}
 
         rendered_values = {"request": request, "data": rows}
         return templates.TemplateResponse("index.html", rendered_values)

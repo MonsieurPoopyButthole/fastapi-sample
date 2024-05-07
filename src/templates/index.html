@@ -33,15 +33,15 @@
       <div class="card-group">
         <div class="card bg-light mb-3 mx-3" style="max-width: 18rem">
           <img
-            src="{{ item.logo }}"
+            src="{{ item[4] }}"
             class="card-img-top"
             alt="Book Cover Image"
           />
           <div class="card-body">
-            <h5 class="card-title">{{ item.title }}</h5>
-            <h5 class="card-title">Author: {{ item.author }}</h5>
-            <h5 class="card-title">Year: {{ item.year }}</h5>
-            <p class="card-text">{{ item.description }}</p>
+            <h5 class="card-title">{{ item[1] }}</h5>
+            <h5 class="card-title">Author: {{ item[2] }}</h5>
+            <h5 class="card-title">Year: {{ item[3] }}</h5>
+            <p class="card-text">{{ item[5] }}</p>
           </div>
         </div>
 
